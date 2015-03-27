@@ -8,8 +8,6 @@ gem 'rails', '~>4.2'
 gem 'sqlite3', group: :development
 gem 'pg', group: :production
 
-gem 'rails_12factor', group: :production
-
 # Use SCSS for stylesheets
 gem 'sass-rails'
 gem 'bootstrap-sass', '~> 3.3.1'
@@ -42,6 +40,9 @@ gem 'autoprefixer-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
